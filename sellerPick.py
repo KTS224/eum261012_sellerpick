@@ -194,10 +194,10 @@ def doWork():
                     # 💡 핵심: 아직 체크가 안 되어 있는(False) 항목만 찾아서 클릭합니다.
                     if not actual_input.is_selected():
                         driver.execute_script("arguments[0].click();", actual_input)
-                        print(f"[{index}번째 항목] 미체크 상태 확인 -> 추가 체크 완료")
+                        # print(f"[{index}번째 항목] 미체크 상태 확인 -> 추가 체크 완료")
                         time.sleep(0.2)
                     else:
-                        print(f"[{index}번째 항목] 이미 체크되어 있음 -> 패스")
+                        # print(f"[{index}번째 항목] 이미 체크되어 있음 -> 패스")
                         
                 except Exception as e:
                     print(f"{index}번째 항목 추가 체크 중 오류 발생:", e)
@@ -214,7 +214,7 @@ def doWork():
                 try:
                     # [진짜 수정] arguments 뒤에 [0]을 붙여 정확한 자바스크립트 클릭 명령을 내립니다.
                     driver.execute_script("arguments[0].click();", target_input)
-                    print(f"[{index}번째 항목] 체크 해제 완료")
+                    # print(f"[{index}번째 항목] 체크 해제 완료")
                     
                     # 안정적인 반영을 위한 짧은 대기
                     time.sleep(0.2)
