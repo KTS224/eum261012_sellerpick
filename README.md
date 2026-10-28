@@ -3,9 +3,9 @@
 
 ```python
 checkbox = driver.find_element(
-            By.XPATH,
-            '/html/body/div[4]/div[2]/div[2]/div[4]/div/div[4]/div[1]/div/label/input'
-        )
+    By.XPATH,
+    '//input[@type="checkbox" and @data-spall]'
+)
 
         if checkbox.is_selected():
             checkbox.click()
